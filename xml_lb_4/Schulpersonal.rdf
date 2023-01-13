@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY per "http://example.org/personal/per#" >
+]>
+
+<rdf:RDF
+    xmlns:per="http://example.org/personal/per#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#" > 
+  <rdf:Description rdf:about="&per;bernd_liebisch">
+    <rdf:type rdf:resource="&per;student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="&per;paul_linke">
+    <per:isFather rdf:resource="&per;heiner_lederer"/>
+    <per:isBrother rdf:resource="&per;andreas_hilbert"/>
+    <per:teaches rdf:resource="&per;heiner_lederer"/>
+    <per:teaches rdf:resource="&per;bernd_liebisch"/>
+    <rdf:type rdf:resource="&per;teacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="&per;peter_meier">
+    <rdf:type rdf:resource="&per;teacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="&per;alfred_lober">
+    <rdf:type rdf:resource="&per;student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="&per;caretaker1">
+    <per:isFather rdf:resource="&per;alfred_lober"/>
+    <owl:sameAs rdf:resource="&per;hans_breuer"/>
+    <rdf:type rdf:resource="&per;caretaker"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="&per;heiner_lederer">
+    <rdf:type rdf:resource="&per;student"/>
+  </rdf:Description>
+  <per:teacher rdf:about="&per;andreas_hilbert">
+    <per:isBrother rdf:resource="&per;peter_meier"/>
+    <per:teaches rdf:resource="&per;alfred_lober"/>
+    <per:teaches rdf:resource="&per;bernd_liebisch"/>
+  </per:teacher>
+</rdf:RDF>
+
